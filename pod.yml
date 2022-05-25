@@ -3,6 +3,13 @@
   collections:
     - kubernetes.core
   tasks:
+  - name: install pre-requisites
+  pip:
+    name:
+      - openshift
+      - pyyaml
+      - kubernetes
+      
   - name: Create a k8s namespace
     kubernetes.core.k8s:
       name: testing
