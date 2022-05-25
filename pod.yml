@@ -4,11 +4,10 @@
     - kubernetes.core
   tasks:
   - name: install pre-requisites
-  pip:
+    pip:
     name:
-      - openshift
       - pyyaml
-      - kubernetes
+      - kubernetes 
       
   - name: Create a k8s namespace
     kubernetes.core.k8s:
